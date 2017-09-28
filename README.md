@@ -1,8 +1,9 @@
-#CardFight
+# CardFight
 
-##Introduction 
+## Introduction 
 
-###Rules
+### Rules
+
 Game Setup : 
 
 cards are shuffled 
