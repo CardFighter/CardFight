@@ -18,3 +18,15 @@ hs_err_pid*
 \.settings/org\.eclipse\.jdt\.core\.prefs
 
 \.settings/org\.eclipse\.m2e\.core\.prefs
+
+\.idea/compiler\.xml
+
+\.idea/misc\.xml
+
+\.idea/modules\.xml
+
+\.idea/vcs\.xml
+
+\.idea/workspace\.xml
+
+CardFight\.iml
