@@ -33,3 +33,9 @@ target/classes/META-INF/maven/CardFighter/CardFight/pom\.xml
 \.idea/workspace\.xml
 
 CardFight\.iml
+
+target/classes/META-INF/MANIFEST\.MF
+
+target/classes/META-INF/maven/CardFighter/CardFight/pom\.properties
+
+target/classes/META-INF/maven/CardFighter/CardFight/pom\.xml
