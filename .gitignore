@@ -24,3 +24,15 @@ target/classes/META-INF/MANIFEST\.MF
 target/classes/META-INF/maven/CardFighter/CardFight/pom\.properties
 
 target/classes/META-INF/maven/CardFighter/CardFight/pom\.xml
+
+\.idea/compiler\.xml
+
+\.idea/misc\.xml
+
+\.idea/modules\.xml
+
+\.idea/vcs\.xml
+
+\.idea/workspace\.xml
+
+CardFight\.iml
