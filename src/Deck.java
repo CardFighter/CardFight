@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Deck {
 
-
+    private static Random rand = new Random();
 
     //Attribut
     private List<Card> cards;
@@ -16,6 +17,7 @@ public class Deck {
     //Constructeur
     public Deck(int nbr_set)
     {
+        super();
         cards= new ArrayList<>();
         for(int i =0;i<nbr_set;i++)
         {
@@ -34,7 +36,12 @@ public class Deck {
 
     public void Shuffle()
     {
-        //melange
+        List<Card> cards_shuffle = new ArrayList<Card>();
+        while(cards.size()!=0)
+        {
+            cards_shuffle.add(cards.remove(rand.nextInt(cards.size())));
+        }
+        cards=cards_shuffle;
     }
 
     public Card Draw() //retourne la carte retirer
