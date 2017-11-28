@@ -3,26 +3,50 @@ import java.util.List;
 
 public class Kingdom {
 
-    //Attributes
+	/**
+     * Attributes
+     */
     private List<Card> cards;
 
-    // Constructor
+    /**
+     * Constructor with no initial parameters
+     */
     public Kingdom() {
         this.cards = new ArrayList<Card>();
     }
 
-    // Getter and setter
+    /**
+     * Getters and setters
+     */
     public List<Card> Cards() {
         return cards;
     }
 
 
-    //Methods
-    public int CountPoints(Card[] cardsInKingdom) {
+    /**
+     * Methods 
+     */
+    
+    /**
+     * Method CountPoints counts the point of the current kingdom
+     * @return points
+     */
+    public int CountPoints() {
         return 0;
     }
 
     public void Add(Card cardToAdd) {
         cards.add(cardToAdd);
+    }
+    
+    public void Remove(Card cardToRemove) {
+    	if(cards.contains(cardToRemove))
+        {
+            cards.remove(cards.indexOf(cardToRemove));
+        }
+    }
+    
+    public int Length() {
+    	return cards.size();
     }
 }

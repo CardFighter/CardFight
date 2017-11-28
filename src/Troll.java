@@ -4,15 +4,17 @@ public class Troll extends Card {
     {
 
     }
-
+    
+    
+    /**
+     * Switch the kingdom of the two players
+     * @param hand
+     * @param opponentHand
+     * @param kingdom
+     * @param opponentKingdom
+     * @param deck
+     */
     @Override
-    public void Power(Hand hand,Hand opponent_hand,Kingdom kingdom,Kingdom opponent_kingdom,Deck deck) {
-
-        //swap kingdom
-        Kingdom res = kingdom;
-        //WORK OR NEED TO DUPLICATE ?
-        kingdom = opponent_kingdom;
-        opponent_kingdom = res;
-
+    public void Power(Hand hand,Hand opponentHand,Kingdom kingdom,Kingdom opponentKingdom,Deck deck) {
     }
 }

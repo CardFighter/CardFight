@@ -3,11 +3,20 @@ public class Korrigan extends Card  {
     public Korrigan()
     {
     }
-
+    
+    
+    /**
+     * The power of the Korrigan makes the current player draw twice in the opponent hand.
+     * Drawing is random
+     * @param hand
+     * @param opponentHand
+     * @param kingdom
+     * @param opponentKingdom
+     * @param deck
+     */
     @Override
-    public void Power(Hand hand,Hand opponent_hand,Kingdom kingdom,Kingdom opponent_kingdom,Deck deck) {
-        //draw 2 random cards in opponent hand
-        hand.Cards().add(opponent_hand.Remove_random());
-        hand.Cards().add(opponent_hand.Remove_random());
+    public void Power(Hand hand,Hand opponentHand,Kingdom kingdom,Kingdom opponentKingdom,Deck deck) {
+        hand.Cards().add(opponentHand.RandomRemove());
+        hand.Cards().add(opponentHand.RandomRemove());
     }
 }
