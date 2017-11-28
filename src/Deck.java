@@ -46,6 +46,9 @@ public class Deck {
 
     public Card Draw() //retourne la carte retirer
     {
-        return cards.remove(0);
+        if(cards.size()>=1){
+            return cards.remove(0);
+        }
+        return null;
     }
 }
