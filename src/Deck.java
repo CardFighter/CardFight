@@ -14,6 +14,7 @@ public class Deck {
      */
     public Deck(int nbr_set)
     {
+    	// Ask medhouille
         super();
         int r;
         for(int i = 0; i < nbr_set; i++)
