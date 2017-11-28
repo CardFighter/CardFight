@@ -3,31 +3,45 @@ import java.util.List;
 
 public class Hand {
 
-    //Attributs
+	/**
+     * Attributes
+     */
     private List<Card> cards;
-
-    //Getteurs et Setteurs
-    public List<Card> Cards() {
-        return cards;
-    }
-
-    //Constructeur
+    
+    /**
+     * Constructor with no initial data
+     */
     public Hand()
     {
         cards = new ArrayList<Card>();
     }
 
-    //Methodes
-    public Card Remove(Card card_play) // renvoie la carte joué ou volé et l'enleve de la main
+    /**
+     * Getters and setters
+     */
+    public List<Card> Cards() {
+        return cards;
+    }
+
+    /**
+     * Methods
+     */
+    
+    /**
+     * Method Remove removes a card
+     * @param cardToRemove
+     * @return the card that has been removed
+     */
+    public Card Remove(Card cardToRemove) 
     {
-        if(cards.contains(card_play))
+        if(cards.contains(cardToRemove))
         {
-            return cards.remove(cards.indexOf(card_play));
+            return cards.remove(cards.indexOf(cardToRemove));
         }
         return null;
     }
 
-    public Card Remove_random() // return a random card
+    public Card RandomRemove() // return a random card
     {
         if(cards.size() >=1) {
             int rand = (int) (Math.random() * cards.size());
@@ -39,5 +53,5 @@ public class Hand {
     public void Draw(Deck deck)
     {
         cards.add(deck.Draw());
-    }
+    } 
 }

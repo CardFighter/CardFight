@@ -1,54 +1,54 @@
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class Deck {
-
+	/**
+     * Attributes
+     */
     private static Random rand = new Random();
-
-    //Attribut
     private List<Card> cards;
-
-    //Getteur et Setteur
-    public List<Card> Cards() {
-        return cards;
-    }
-
-    //Constructeur
+    
+    /**
+     * Constructor 
+     * @param nbr_set
+     */
     public Deck(int nbr_set)
     {
         super();
-        cards= new ArrayList<>();
-        for(int i =0;i<nbr_set;i++)
+        int r;
+        for(int i = 0; i < nbr_set; i++)
         {
-            for(int j=0;j<=5;j++)
-            {
-                cards.add(new Card(j));
-            }
+        	r = rand.nextInt();
+        	//c = 
+        	//cards.add(c);
         }
     }
+    
+    /**
+     * Getters and setters
+     */
 
-    //Methodes
-    public int RemainingCard()
-    {
-        return cards.size();
-    }
+	public List<Card> getCards() {
+		return cards;
+	}
 
-    public void Shuffle()
-    {
-        List<Card> cards_shuffle = new ArrayList<Card>();
-        while(cards.size()!=0)
+	public void setCards(List<Card> cards) {
+		this.cards = cards;
+	}
+	
+	/**
+     * Methods
+     */
+	
+	/**
+     * Method Draw draws a card from the deck
+     * @return drawn card
+     */
+	public Card Draw() {
+		if(cards.size() >= 1)
         {
-            cards_shuffle.add(cards.remove(rand.nextInt(cards.size())));
-        }
-        cards=cards_shuffle;
-    }
-
-    public Card Draw() //retourne la carte retirer
-    {
-        if(cards.size()>=1){
             return cards.remove(0);
         }
         return null;
-    }
+	}
 }
