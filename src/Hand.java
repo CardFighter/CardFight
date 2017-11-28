@@ -26,4 +26,18 @@ public class Hand {
         }
         return null;
     }
+
+    public Card Remove_random() // return a random card
+    {
+        if(cards.size() >=1) {
+            int rand = (int) (Math.random() * cards.size());
+            return cards.remove(rand);
+        }
+        return null;
+    }
+
+    public void Draw(Deck deck)
+    {
+        cards.add(deck.Draw());
+    }
 }
