@@ -19,5 +19,6 @@ public class Goblin extends Card {
      */
     @Override
     public void Power(Hand hand,Hand opponentHand,Kingdom kingdom,Kingdom opponentKingdom,Deck deck) {
+        hand.Swap(opponentHand);
     }
 }

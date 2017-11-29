@@ -1,4 +1,8 @@
+import java.util.Random;
+
 public class Elf extends Card {
+
+    private static Random rand = new Random();
 
     public Elf()
     {
@@ -15,6 +19,9 @@ public class Elf extends Card {
     // Est ce que ca fait une copie la carte ou pas ?
     @Override
     public void Power(Hand hand,Hand opponentHand,Kingdom kingdom,Kingdom opponentKingdom,Deck deck) {
-        kingdom.Cards().get(0).Power(hand,opponentHand,kingdom,opponentKingdom,deck);
+
+        int r = rand.nextInt(kingdom.Length());
+
+        kingdom.getCards().get(r).Power(hand,opponentHand,kingdom,opponentKingdom,deck);
     }
 }

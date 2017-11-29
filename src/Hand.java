@@ -19,8 +19,11 @@ public class Hand {
     /**
      * Getters and setters
      */
-    public List<Card> Cards() {
+    public List<Card> getCards() {
         return cards;
+    }
+    public void setCards(List<Card> newCards) {
+        cards=newCards;
     }
 
     /**
@@ -48,6 +51,16 @@ public class Hand {
             return cards.remove(rand);
         }
         return null;
+    }
+
+    /**
+     * Method Swap two list_cards of hand
+     */
+    public void Swap(Hand hand)
+    {
+        List<Card> tmp = cards;
+        cards = hand.getCards();
+        hand.setCards(tmp);
     }
 
     public void Draw(Deck deck)

@@ -33,7 +33,7 @@ public class Dryad extends Card {
     	
     	int r = rand.nextInt(robbedKingdom.Length());
     	
-    	Card stolenCard = robbedKingdom.Cards().get(r);
+    	Card stolenCard = robbedKingdom.getCards().get(r);
     	robbedKingdom.Remove(stolenCard);
     	
     	return stolenCard;

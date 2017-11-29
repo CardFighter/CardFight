@@ -18,8 +18,11 @@ public class Kingdom {
     /**
      * Getters and setters
      */
-    public List<Card> Cards() {
+    public List<Card> getCards() {
         return cards;
+    }
+    public void setCards(List<Card> newCards) {
+        cards = newCards;
     }
 
 
@@ -44,6 +47,17 @@ public class Kingdom {
         {
             cards.remove(cards.indexOf(cardToRemove));
         }
+    }
+
+
+    /**
+     * Method Swap two list_cards of kingdom
+     */
+    public void Swap(Kingdom kingdom)
+    {
+        List<Card> tmp = cards;
+        cards = kingdom.getCards();
+        kingdom.setCards(tmp);
     }
     
     public int Length() {

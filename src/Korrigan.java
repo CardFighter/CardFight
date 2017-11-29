@@ -16,7 +16,7 @@ public class Korrigan extends Card  {
      */
     @Override
     public void Power(Hand hand,Hand opponentHand,Kingdom kingdom,Kingdom opponentKingdom,Deck deck) {
-        hand.Cards().add(opponentHand.RandomRemove());
-        hand.Cards().add(opponentHand.RandomRemove());
+        hand.getCards().add(opponentHand.RandomRemove());
+        hand.getCards().add(opponentHand.RandomRemove());
     }
 }
