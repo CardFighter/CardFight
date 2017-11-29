@@ -13,9 +13,9 @@ public abstract class Card {
     /**
      * Method Power applies the power of the card
      * @param hand
-     * @param opponent_hand
+     * @param opponentHand
      * @param kingdom
-     * @param oppenent_kingdom
+     * @param opponentKingdom
      * @param deck
      */
     public void Power(Hand hand,Hand opponentHand,Kingdom kingdom,Kingdom opponentKingdom,Deck deck)
