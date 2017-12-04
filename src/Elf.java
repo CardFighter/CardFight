@@ -24,4 +24,9 @@ public class Elf extends Card {
 
         kingdom.getCards().get(r).Power(hand,opponentHand,kingdom,opponentKingdom,deck);
     }
+    
+    @Override
+	public String toString() {
+		return "Elf";
+	}
 }

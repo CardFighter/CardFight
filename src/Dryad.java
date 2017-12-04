@@ -38,4 +38,9 @@ public class Dryad extends Card {
     	
     	return stolenCard;
     }
+    
+    @Override
+	public String toString() {
+		return "Dryad";
+	}
 }

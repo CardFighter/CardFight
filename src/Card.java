@@ -21,6 +21,4 @@ public abstract class Card {
     public void Power(Hand hand,Hand opponentHand,Kingdom kingdom,Kingdom opponentKingdom,Deck deck)
     {
     }
-
-
 }

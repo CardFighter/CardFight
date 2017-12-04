@@ -1,5 +1,8 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Kingdom {
 
@@ -7,6 +10,7 @@ public class Kingdom {
      * Attributes
      */
     private List<Card> cards;
+    private static final Class<? extends Card>[] types = new Class[]{Elf.class, Dryad.class, Gnome.class, Goblin.class, Korrigan.class, Troll.class};
 
     /**
      * Constructor with no initial parameters
@@ -35,7 +39,29 @@ public class Kingdom {
      * @return points
      */
     public int CountPoints() {
-        return 0;
+    	
+    	int points = 0;
+    	
+    	Map<Class<? extends Card>, Integer> mapCards = new HashMap<Class<? extends Card>, Integer>();
+    	
+    	for(Class<? extends Card> c:types) {
+    		mapCards.put(c, 0);
+    	}
+    	
+    	for (int i = 0; i < cards.size(); i++) {
+    		points++;
+    		for(Class<? extends Card> c:types) {
+    			if(cards.get(i).getClass() == c) {
+    				mapCards.put(c, mapCards.get(c) + 1);
+    			}
+    		}
+    	}
+    	
+    	int bonus = Collections.min(mapCards.values());
+    	
+    	points += bonus * 3;
+    	
+        return points;
     }
 
     public void Add(Card cardToAdd) {
@@ -63,4 +89,18 @@ public class Kingdom {
     public int Length() {
     	return cards.size();
     }
+
+	@Override
+	public String toString() {
+		String toPrint = "";	
+		
+		if (cards != null) {
+			for (int i = 0; i < cards.size(); i++) {
+				toPrint += cards.get(i).toString() + " ";
+			}
+		}
+		return toPrint;
+	}
+    
+    
 }

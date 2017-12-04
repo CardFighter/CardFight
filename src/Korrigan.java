@@ -19,4 +19,9 @@ public class Korrigan extends Card  {
         hand.getCards().add(opponentHand.RandomRemove());
         hand.getCards().add(opponentHand.RandomRemove());
     }
+    
+    @Override
+	public String toString() {
+		return "Korrigan";
+	}
 }

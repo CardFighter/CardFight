@@ -21,4 +21,9 @@ public class Gnome extends Card {
         hand.Draw(deck);
         hand.Draw(deck);
     }
+    
+    @Override
+	public String toString() {
+		return "Gnome";
+	}
 }
