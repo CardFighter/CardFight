@@ -22,7 +22,9 @@ public class Elf extends Card {
 
         int r = rand.nextInt(kingdom.Length());
 
-        kingdom.getCards().get(r).Power(hand,opponentHand,kingdom,opponentKingdom,deck);
+        Card randomCard = kingdom.getCards().get(r);
+        randomCard.Power(hand,opponentHand,kingdom,opponentKingdom,deck);
+        kingdom.Add(randomCard);
     }
     
     @Override
