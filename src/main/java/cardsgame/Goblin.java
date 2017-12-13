@@ -1,3 +1,4 @@
+package cardsgame;
 public class Goblin extends Card {
 
 

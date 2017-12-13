@@ -1,9 +1,12 @@
+package cardsgame;
+
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -31,7 +34,7 @@ public class KingdomStoryTest {
 		kingdom.Add(dryad);
 		kingdom.Add(elf);
 		
-		assertEquals(expected, kingdom.getCards());
+		Assert.assertEquals(expected, kingdom.getCards());
 	}
 
 }

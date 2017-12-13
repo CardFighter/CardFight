@@ -1,3 +1,5 @@
+package cardsgame;
+
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
@@ -29,6 +31,6 @@ public class HandStoryTest {
 			expected.add(deck.getCards().get(0));
 			hand.Draw(deck);
 		}
-		assertEquals(expected, hand.getCards());
+		Assert.assertEquals(expected, hand.getCards());
 	}
 }

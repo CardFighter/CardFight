@@ -1,3 +1,4 @@
+package cardsgame;
 import java.util.Random;
 
 public class Dryad extends Card {

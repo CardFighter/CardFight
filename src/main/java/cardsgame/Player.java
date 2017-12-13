@@ -1,4 +1,4 @@
-
+package cardsgame;
 public class Player {
 	/**
      * Attributes

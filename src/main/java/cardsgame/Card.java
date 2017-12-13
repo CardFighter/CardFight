@@ -1,3 +1,4 @@
+package cardsgame;
 public abstract class Card {
 	/**
      * Constructor 

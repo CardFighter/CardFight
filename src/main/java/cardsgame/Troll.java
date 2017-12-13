@@ -1,15 +1,14 @@
-public class Gnome extends Card {
+package cardsgame;
+public class Troll extends Card {
 
-    public Gnome()
+    public Troll()
     {
-    }
 
-    /**
-     * Methods
-     */
+    }
+    
     
     /**
-     * The power of Gnome draws two cards from the deck and place them in Hand
+     * Switch the kingdom of the two players
      * @param hand
      * @param opponentHand
      * @param kingdom
@@ -18,12 +17,11 @@ public class Gnome extends Card {
      */
     @Override
     public void Power(Hand hand,Hand opponentHand,Kingdom kingdom,Kingdom opponentKingdom,Deck deck) {
-        hand.Draw(deck);
-        hand.Draw(deck);
+        kingdom.Swap(opponentKingdom);
     }
     
     @Override
 	public String toString() {
-		return "Gnome";
+		return "Troll";
 	}
 }

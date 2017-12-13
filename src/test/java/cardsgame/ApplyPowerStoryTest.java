@@ -1,9 +1,12 @@
+package cardsgame;
+
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -53,14 +56,14 @@ public class ApplyPowerStoryTest {
 		opponentKingdom.Add(elf);
 		Card expectedStolenCard = opponentKingdom.getCards().get(0);
 		
-		assertEquals(1, opponentKingdom.Length());
-		assertEquals(0, kingdom.Length());
+		Assert.assertEquals(1, opponentKingdom.Length());
+		Assert.assertEquals(0, kingdom.Length());
 		
 		hand.Use(hand, opponentHand, kingdom, opponentKingdom, deck, dryad);
 		
-		assertEquals(0, opponentKingdom.Length());
-		assertEquals(2, kingdom.Length());
-		assertEquals(expectedStolenCard, kingdom.getCards().get(0));
+		Assert.assertEquals(0, opponentKingdom.Length());
+		Assert.assertEquals(2, kingdom.Length());
+		Assert.assertEquals(expectedStolenCard, kingdom.getCards().get(0));
 	}
 
 	@Test
@@ -88,9 +91,9 @@ public class ApplyPowerStoryTest {
 		expectedDeck.add(dryad1);
 		expectedDeck.add(dryad2);
 		
-		assertEquals(expectedHand, hand.getCards());
-		assertEquals(expectedDeck, deck.getCards());
-		assertEquals(expectedKingdom, kingdom.getCards());
+		Assert.assertEquals(expectedHand, hand.getCards());
+		Assert.assertEquals(expectedDeck, deck.getCards());
+		Assert.assertEquals(expectedKingdom, kingdom.getCards());
 		
 		hand.Use(hand, opponentHand, kingdom, opponentKingdom, deck, elf);
 		
@@ -101,9 +104,9 @@ public class ApplyPowerStoryTest {
 		expectedKingdom.add(elf);
 		expectedDeck.clear();
 		
-		assertEquals(expectedHand, hand.getCards());
-		assertEquals(expectedDeck, deck.getCards());
-		assertEquals(expectedKingdom, kingdom.getCards());
+		Assert.assertEquals(expectedHand, hand.getCards());
+		Assert.assertEquals(expectedDeck, deck.getCards());
+		Assert.assertEquals(expectedKingdom, kingdom.getCards());
 	}
 	
 	@Test
@@ -126,9 +129,9 @@ public class ApplyPowerStoryTest {
 		expectedDeck.add(dryad);
 		expectedDeck.add(elf);
 		
-		assertEquals(expectedKingdom, kingdom.getCards());
-		assertEquals(expectedHand, hand.getCards());
-		assertEquals(expectedDeck, deck.getCards());
+		Assert.assertEquals(expectedKingdom, kingdom.getCards());
+		Assert.assertEquals(expectedHand, hand.getCards());
+		Assert.assertEquals(expectedDeck, deck.getCards());
 		
 		hand.Use(hand, opponentHand, kingdom, opponentKingdom, deck, gnome);
 		
@@ -138,9 +141,9 @@ public class ApplyPowerStoryTest {
 		expectedHand.add(elf);
 		expectedKingdom.add(gnome);
 		
-		assertEquals(expectedKingdom, kingdom.getCards());
-		assertEquals(expectedHand, hand.getCards());
-		assertEquals(expectedDeck, deck.getCards());
+		Assert.assertEquals(expectedKingdom, kingdom.getCards());
+		Assert.assertEquals(expectedHand, hand.getCards());
+		Assert.assertEquals(expectedDeck, deck.getCards());
 	}
 
 	@Test
@@ -163,9 +166,9 @@ public class ApplyPowerStoryTest {
 		opponentHand.Add(dryad);
 		expectedOpponentHand.add(dryad);
 		
-		assertEquals(expectedHand, hand.getCards());
-		assertEquals(expectedOpponentHand, opponentHand.getCards());
-		assertEquals(expectedKingdom, kingdom.getCards());
+		Assert.assertEquals(expectedHand, hand.getCards());
+		Assert.assertEquals(expectedOpponentHand, opponentHand.getCards());
+		Assert.assertEquals(expectedKingdom, kingdom.getCards());
 		
 		hand.Use(hand, opponentHand, kingdom, opponentKingdom, deck, goblin);
 		
@@ -175,9 +178,9 @@ public class ApplyPowerStoryTest {
 		expectedOpponentHand.add(elf);
 		expectedKingdom.add(goblin);
 		
-		assertEquals(expectedHand, hand.getCards());
-		assertEquals(expectedOpponentHand, opponentHand.getCards());
-		assertEquals(expectedKingdom, kingdom.getCards());
+		Assert.assertEquals(expectedHand, hand.getCards());
+		Assert.assertEquals(expectedOpponentHand, opponentHand.getCards());
+		Assert.assertEquals(expectedKingdom, kingdom.getCards());
 	}
 
 	@Test
@@ -200,9 +203,9 @@ public class ApplyPowerStoryTest {
 		expectedOpponentHand.add(elf);
 		expectedOpponentHand.add(dryad);
 		
-		assertEquals(expectedHand, hand.getCards());
-		assertEquals(expectedOpponentHand, opponentHand.getCards());
-		assertEquals(expectedKingdom, kingdom.getCards());
+		Assert.assertEquals(expectedHand, hand.getCards());
+		Assert.assertEquals(expectedOpponentHand, opponentHand.getCards());
+		Assert.assertEquals(expectedKingdom, kingdom.getCards());
 		
 		hand.Use(hand, opponentHand, kingdom, opponentKingdom, deck, korrigan);
 		
@@ -210,9 +213,9 @@ public class ApplyPowerStoryTest {
 		expectedKingdom.add(korrigan);
 		expectedOpponentHand.clear();
 		
-		assertEquals(expectedHandNb, hand.getCards().size());
-		assertEquals(expectedOpponentHand, opponentHand.getCards());
-		assertEquals(expectedKingdom, kingdom.getCards());
+		Assert.assertEquals(expectedHandNb, hand.getCards().size());
+		Assert.assertEquals(expectedOpponentHand, opponentHand.getCards());
+		Assert.assertEquals(expectedKingdom, kingdom.getCards());
 	}
 
 	@Test
@@ -236,9 +239,9 @@ public class ApplyPowerStoryTest {
 		opponentKingdom.Add(dryad);
 		expectedOpponentKingdom.add(dryad);
 		
-		assertEquals(expectedHand, hand.getCards());
-		assertEquals(expectedKingdom, kingdom.getCards());
-		assertEquals(expectedOpponentKingdom, opponentKingdom.getCards());
+		Assert.assertEquals(expectedHand, hand.getCards());
+		Assert.assertEquals(expectedKingdom, kingdom.getCards());
+		Assert.assertEquals(expectedOpponentKingdom, opponentKingdom.getCards());
 		
 		hand.Use(hand, opponentHand, kingdom, opponentKingdom, deck, troll);
 		
@@ -249,8 +252,8 @@ public class ApplyPowerStoryTest {
 		expectedOpponentKingdom.clear();
 		expectedOpponentKingdom.add(elf);
 		
-		assertEquals(expectedHand, hand.getCards());
-		assertEquals(expectedKingdom, kingdom.getCards());
-		assertEquals(expectedOpponentKingdom, opponentKingdom.getCards());
+		Assert.assertEquals(expectedHand, hand.getCards());
+		Assert.assertEquals(expectedKingdom, kingdom.getCards());
+		Assert.assertEquals(expectedOpponentKingdom, opponentKingdom.getCards());
 	}
 }

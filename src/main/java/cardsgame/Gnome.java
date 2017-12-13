@@ -1,13 +1,16 @@
-public class Korrigan extends Card  {
+package cardsgame;
+public class Gnome extends Card {
 
-    public Korrigan()
+    public Gnome()
     {
     }
-    
+
+    /**
+     * Methods
+     */
     
     /**
-     * The power of the Korrigan makes the current player draw twice in the opponent hand.
-     * Drawing is random
+     * The power of Gnome draws two cards from the deck and place them in Hand
      * @param hand
      * @param opponentHand
      * @param kingdom
@@ -16,12 +19,12 @@ public class Korrigan extends Card  {
      */
     @Override
     public void Power(Hand hand,Hand opponentHand,Kingdom kingdom,Kingdom opponentKingdom,Deck deck) {
-        hand.getCards().add(opponentHand.RandomRemove());
-        hand.getCards().add(opponentHand.RandomRemove());
+        hand.Draw(deck);
+        hand.Draw(deck);
     }
     
     @Override
 	public String toString() {
-		return "Korrigan";
+		return "Gnome";
 	}
 }
