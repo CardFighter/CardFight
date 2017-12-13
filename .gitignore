@@ -19,9 +19,6 @@ hs_err_pid*
 
 \.settings/org\.eclipse\.m2e\.core\.prefs
 
-target/classes/META-INF/MANIFEST\.MF
-target/classes/META-INF/maven/CardFighter/CardFight/pom\.properties
-target/classes/META-INF/maven/CardFighter/CardFight/pom\.xml
 \.idea/compiler\.xml
 
 \.idea/misc\.xml
