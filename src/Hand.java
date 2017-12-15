@@ -14,11 +14,6 @@ public class Hand{
 	public Hand(){
 		cards = new ArrayList<Card>();
 	}
-	public Hand(Deck deck)
-	{
-		cards = new ArrayList<Card>();
-		Draw(deck, 5);
-	}
 
 	/**
 	 * Getters and setters
@@ -34,11 +29,9 @@ public class Hand{
 	 * Methods
 	 */
 	
-	public void Use(Hand hand, Hand opponentHand, Kingdom kingdom, Kingdom opponentKingdom, Deck deck, Card card)
+	public void Draw(Deck deck) //for gnome
 	{
-		Card tmp = Remove(card);
-		card.Power(hand, opponentHand, kingdom, opponentKingdom, deck);
-		kingdom.Add(tmp);
+		deck.getCards().add(deck.Draw());
 	}
 
 	public void Add(Card card) 
@@ -72,6 +65,7 @@ public class Hand{
 	/**
 	 * Method Swap two list_cards of hand
 	 */
+	//ça va partir
 	public void Swap(Hand hand)
 	{
 		List<Card> tmp = cards;
@@ -79,17 +73,7 @@ public class Hand{
 		hand.setCards(tmp);
 	}
 
-	public void Draw(Deck deck)
-	{
-		cards.add(deck.Draw());
-	} 
-
-	public void Draw(Deck deck, int nb)
-	{
-		for (int i = 0; i < nb; i++) {
-			cards.add(deck.Draw());
-		}
-	}
+	
 	
 	@Override
 	public String toString() {

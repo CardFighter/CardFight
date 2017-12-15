@@ -1,11 +1,12 @@
 
-public class Player {
+public abstract class Player {
 	/**
      * Attributes
      */
-	private Hand hand;
-	private Kingdom kingdom;
-	private int points;
+	protected Hand hand;
+	protected Kingdom kingdom;
+	protected int points;
+	protected Deck deck;
 	
 	/**
      * Constructor with no initial parameters
@@ -13,12 +14,15 @@ public class Player {
 	public Player() {
 		
 	}
-	public Player(Hand hand, Kingdom kingdom, int points) {
-		super();
-		this.hand = hand;
-		this.kingdom = kingdom;
-		this.points = points;
+	
+	public Player(Deck deck) {
+		this.deck = deck;
+		this.hand = new Hand();
+		this.kingdom = new Kingdom();
+		this.points = 0;
 	}
+	
+	
 	
 	/**
      * Getters and setters
@@ -41,12 +45,32 @@ public class Player {
 	public void setPoints(int points) {
 		this.points = points;
 	}
-	
+	public Deck getDeck() {
+		return deck;
+	}
+	public void setDeck(Deck deck) {
+		this.deck = deck;
+	}
 	/**
      * Methods 
      */
 	
-	public int CountPoints() {
-		return kingdom.CountPoints();
+	/*
+	 * Draw from deck function
+	 */
+	
+	public void Draw()
+	{
+		deck.getCards().add(deck.Draw());
+	} 
+
+	public void Draw(int nb)
+	{
+		for (int i = 0; i < nb; i++) {
+			deck.getCards().add(deck.Draw());
+		}
 	}
+	
+	public abstract void play(Hand opponent_hand,Kingdom opponent_kingdom);
+	
 }
