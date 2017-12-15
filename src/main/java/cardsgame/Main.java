@@ -15,5 +15,6 @@ public class Main {
 		deck_test.Shuffle();
 		System.out.println(deck_test.Cards().get(0).Race());
 		*/
+
 	}
 }
